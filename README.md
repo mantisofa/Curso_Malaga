@@ -39,3 +39,7 @@ Crear proyecto con angular-cli
 Enlaces symbólicos
 >mklink /d node_modules ..\..\..\node_modules
 
+Generar un componente dentro de un proyecto
+>ng generate c pie
+
+Generar un 
