@@ -36,3 +36,6 @@ Fork te creas una copia del proyecto de otro en tu repositorio. Los cambios nunc
 Crear proyecto con angular-cli
 >ng new HolaMundo
 
+Enlaces symbólicos
+>mklink /d node_modules ..\..\..\node_modules
+
