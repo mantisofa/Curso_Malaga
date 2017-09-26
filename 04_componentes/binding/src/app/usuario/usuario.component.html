@@ -1,7 +1,17 @@
 <p>
   <label for="inName">introduce tu nombre</label>
-  <input type="text" id="inName" [ngModel]="name"/>
-
-  <label for="inSurname">y tu apellido</label>
-  <input type="text" id="inSurname" [ngModel]="surname"/>
+  <input type="text" id="inName" [(ngModel)]="user.name"/>
 </p>
+<p>
+  <label for="inSurname">y tu apellido</label>
+  <input type="text" id="inSurname" [(ngModel)]="user.surname"/>
+</p>
+
+<button (click)="btnBorrar()">Borrar</button>
+<!--<button (click)="btnBorrar($event)">Hola</button>-->
+<p>
+  Hola {{user.name}} {{user.surname}}
+</p>
+<ul>
+  <li *ngFor="let elem of hobbies">{{elem}}</li>
+</ul>

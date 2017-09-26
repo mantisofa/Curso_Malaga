@@ -7,13 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioComponent implements OnInit {
 
-  name: string;
-  surname: string;
-  //user: Object;
+  public user: { name: string,
+          surname: string;
+        };
+  public hobbies: Array<string>;
+
   constructor() { }
 
   ngOnInit() {
-    //this.user = {name: '', surname: ''};
+    this.hobbies = ['Leer', 'Escribir'];
+    this.user = {name: 'Patricio',
+                surname: 'Estrella'};
   }
 
+  btnBorrar() {
+    this.user.name = '';
+    this.user.surname = '';
+  }
+
+  btnHola() {
+    console.log(this.user.name + '' + this.user.surname);
+  }
 }
