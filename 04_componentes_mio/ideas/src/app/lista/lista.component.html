@@ -1,0 +1,14 @@
+<p>
+  <label for="Iideas"> ¡¡Dame una idea!!</label>
+  <input type="text" id="Iideas" [(ngModel)] = "newIdea">
+</p>
+<p>
+  <button (click)="addIdea()">Guardar</button>
+</p>
+<div *ngIf="ideas.length > 0">
+  <h2>Titulo</h2>
+  <ul>
+    <li *ngFor="let elem of ideas">{{elem}}</li>
+  </ul>
+
+</div>

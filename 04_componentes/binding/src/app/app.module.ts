@@ -1,18 +1,21 @@
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { UsuarioComponent } from './usuario/usuario.component';
+import { SharedModule } from './shared/shared.module';
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormularioBnbComponent } from './formulario_bnb/formulario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsuarioComponent
+    FormularioComponent,
+    FormularioBnbComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
