@@ -1,0 +1,20 @@
+<p>
+  
+  <input type="text" placeholder="busca aqui" [(ngModel)]="claveBusqueda">
+</p>
+<p>
+  <button (click)="lanzarBusqueda()">buscar</button>
+</p>
+<div *ngIf="resultados.length>0; then resOK else resError "></div>
+<ng-template #resOK>
+  <h2>Resultados</h2>
+  <ul>
+    <li *ngFor="let res of resultados">{{res}}</li>
+  </ul>
+</ng-template>
+
+<ng-template #resError>
+  <p>
+    sigue buscando
+  </p>
+</ng-template>
