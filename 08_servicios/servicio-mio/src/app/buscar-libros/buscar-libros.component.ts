@@ -21,9 +21,16 @@ export class BuscarLibrosComponent implements OnInit {
   }
 
   lanzarBusqueda() {
+    this.resultados = [];
    // this.resultados = this.servicioBuscar.getLibros(this.claveBusqueda);
    this.http.get(URL + this.claveBusqueda).subscribe(
-     response => console.log(response)
+     response => {
+       const data = response.json();
+       for (let i = 0; i < data.items.length; i++) {
+        this.resultados.push(data.items[i].volumeInfo.title);
+       }
+     },
+     error => console.error(error)
    );
   }
 }

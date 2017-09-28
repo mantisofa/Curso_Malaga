@@ -1,0 +1,20 @@
+<p>
+  <select [(ngModel)]="strValue" (change)="search()">
+    <option *ngFor="let continent of continents" 
+        [value]="continent">{{continent}}</option>
+
+  </select>
+</p>
+<div *ngIf="countries.length>0; then resOK else resError "></div>
+<ng-template #resOK>
+  <h2>Resultados</h2>
+  <ul>
+    <li *ngFor="let res of countries">{{res}}</li>
+  </ul>
+</ng-template>
+
+<ng-template #resError>
+  <p>
+    sigue buscando
+  </p>
+</ng-template>
